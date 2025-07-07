@@ -24,6 +24,8 @@ jobs:
       run: |
         dotnet build --no-restore
     - name: Test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         dotnet pack 
         gh release create
