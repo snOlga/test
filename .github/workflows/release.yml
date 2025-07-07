@@ -28,4 +28,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         dotnet pack 
-        gh release create
+        ls
+        gh release create someTag ./bin/Release/net9.0/test.exe
